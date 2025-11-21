@@ -1,0 +1,1 @@
+# syukatsu-ai.github.io
