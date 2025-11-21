@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Test Security Demo</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <div class="layout">
+        <header>
+            <div class="header-content">
+                <div>
+                    <h1>Web Test Security</h1>
+                    <p>不正検知デモンストレーション</p>
+                </div>
+                <div class="controls">
+                    <button id="startBtn" class="btn primary">監視開始</button>
+                    <button id="stopBtn" class="btn secondary" disabled>監視停止</button>
+                </div>
+            </div>
+        </header>
+
+        <main class="dashboard-grid">
+            <!-- Status Section -->
+            <section class="card status-section">
+                <div class="status-header">
+                    <h2>Current Status</h2>
+                    <div class="status-badge" id="statusIndicator">READY</div>
+                </div>
+                <div class="timer-grid">
+                    <div class="timer-item">
+                        <span class="label">Active Time</span>
+                        <span class="value" id="activeTime">00:00</span>
+                    </div>
+                    <div class="timer-item">
+                        <span class="label">Inactive Time</span>
+                        <span class="value warning" id="inactiveTime">00:00</span>
+                    </div>
+                    <div class="timer-item">
+                        <span class="label">Focus Lost</span>
+                        <span class="value" id="focusLostCount">0</span>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Logs Section -->
+            <div class="logs-grid">
+                <!-- Focus History -->
+                <section class="card log-card">
+                    <div class="card-header">
+                        <h2>Focus History</h2>
+                        <span class="badge">Movements</span>
+                    </div>
+                    <div class="log-container" id="focusHistoryContainer">
+                        <!-- Focus events here -->
+                    </div>
+                </section>
+
+                <!-- System Log -->
+                <section class="card log-card">
+                    <div class="card-header">
+                        <h2>System Alerts</h2>
+                        <span class="badge">Warnings</span>
+                    </div>
+                    <div class="log-container" id="systemLogContainer">
+                        <div class="log-entry system">準備完了</div>
+                    </div>
+                </section>
+
+                <!-- Key Log -->
+                <section class="card log-card">
+                    <div class="card-header">
+                        <h2>Key History</h2>
+                        <span class="badge">Keystrokes</span>
+                    </div>
+                    <div class="log-container" id="keyLogContainer">
+                        <!-- Keys here -->
+                    </div>
+                </section>
+            </div>
+        </main>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+
+</html>
