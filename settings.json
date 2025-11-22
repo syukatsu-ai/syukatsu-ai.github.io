@@ -1,3 +1,17 @@
 {
-  "noteId": "アプリ置き場"
+  "noteId": "アプリ置き場",
+  "social": {
+    "note": {
+      "url": "https://note.com/ai_vs_shukatsu",
+      "visible": true
+    },
+    "twitter": {
+      "url": "aaaaa",
+      "visible": true
+    },
+    "line": {
+      "url": "aaaaaaa",
+      "visible": true
+    }
+  }
 }
